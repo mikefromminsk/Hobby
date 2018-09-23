@@ -15,16 +15,7 @@
             <option value="$PROJECT_DIR$/vk" />
           </set>
         </option>
-        <option name="myModules">
-          <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/ASNECore" />
-            <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/emoj" />
-            <option value="$PROJECT_DIR$/facebook" />
-            <option value="$PROJECT_DIR$/vk" />
-          </set>
-        </option>
+        <option name="resolveModulePerSourceSet" value="false" />
       </GradleProjectSettings>
     </option>
   </component>
