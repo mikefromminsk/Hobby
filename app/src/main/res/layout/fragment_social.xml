@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:background="@drawable/shadow_square"
+        android:id="@+id/relativeLayout32"
+        android:layout_below="@+id/social_login_with"
+        android:layout_alignLeft="@+id/relativeLayout38"
+        android:layout_alignStart="@+id/relativeLayout38"
+        android:layout_marginTop="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:background="#2b406e"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/social_fb_layout"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView8"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/social_fb"
+                android:background="#3b5998" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Facebook"
+                android:id="@+id/social_fb_text"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageView8"
+                android:layout_toEndOf="@+id/imageView8"
+                android:layout_marginLeft="20dp"
+                android:textColor="@android:color/white"
+                android:textSize="24dp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:background="@drawable/shadow_square"
+        android:id="@+id/relativeLayout33"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/relativeLayout32"
+        android:layout_alignLeft="@+id/relativeLayout32"
+        android:layout_alignStart="@+id/relativeLayout32">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:background="#436892"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/social_vk_layout"
+            android:clickable="true">
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="match_parent"
+                android:id="@+id/imageView9"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/social_vk"
+                android:background="@color/vk_color" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Vkontakte"
+                android:id="@+id/social_vk_text"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageView9"
+                android:layout_toEndOf="@+id/imageView9"
+                android:layout_marginLeft="20dp"
+                android:textColor="@android:color/white"
+                android:textSize="24dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Login with"
+        android:id="@+id/social_login_with"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/social_or"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:background="@drawable/shadow_square"
+        android:id="@+id/relativeLayout38"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#c0c0c0"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/social_reg_layout"
+            android:clickable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Registration"
+                android:id="@+id/social_reg_text"
+                android:textColor="@android:color/white"
+                android:textSize="24dp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imageView10"
+                android:layout_toEndOf="@+id/imageView10"
+                android:layout_marginLeft="20dp" />
+
+            <ImageView
+                android:layout_width="65dp"
+                android:layout_height="fill_parent"
+                android:id="@+id/imageView10"
+                android:src="@drawable/social_app"
+                android:background="#929292"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="or"
+        android:id="@+id/social_or"
+        android:layout_marginTop="53dp"
+        android:layout_below="@+id/relativeLayout38"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

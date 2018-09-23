@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:fab="http://schemas.android.com/tools"
+    android:animateLayoutChanges="true">
+
+
+    <RelativeLayout
+        android:animateLayoutChanges="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/relativeLayout50"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:visibility="visible">
+
+        <fragment
+            android:id="@+id/invite_new_position_map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <ImageView
+            android:id="@+id/invite_new_position_picker"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_above="@+id/relativeLayout52"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/picker" />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout52"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"></RelativeLayout>
+
+        <RelativeLayout
+
+            android:focusableInTouchMode="true"
+            android:id="@+id/invite_new_position_time_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/time_background"
+            android:paddingLeft="8dp"
+            android:paddingRight="12dp"
+            android:clickable="true"
+            android:foreground="@drawable/ripple_rounded">
+
+            <TextView
+                android:id="@+id/invite_new_position_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="45dp"
+                android:text="18:20"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/black"
+                android:textSize="18dp"
+                android:layout_marginRight="8dp" />
+
+            <ImageView
+                android:id="@+id/invite_new_position_time_image"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/clock2"
+                android:tint="@color/app_color" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp">
+
+
+            <com.github.clans.fab.FloatingActionButton
+                app:fab_size="mini"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:src="@drawable/add_black"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                app:fab_colorNormal="@android:color/white"
+                android:id="@+id/invite_new_position_zoom_add" />
+
+            <com.github.clans.fab.FloatingActionButton
+                app:fab_size="mini"
+                app:fab_colorNormal="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:src="@drawable/sub"
+                android:layout_below="@+id/invite_new_position_zoom_add"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/invite_new_position_zoom_sub"  />
+
+        </RelativeLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/invite_new_position_autocomplete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:background="@android:color/white"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="false" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/shadow_bottom"
+            android:id="@+id/relativeLayout55"></RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout50"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@android:color/white"
+        android:layout_alignParentBottom="true">
+
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/invite_new_position_ready"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:src="@drawable/checked"
+            app:fab_colorNormal="@color/app_color"
+            app:fab_colorPressed="@color/app_color"
+            app:fab_colorRipple="@android:color/white"
+            app:fab_size="normal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="20dp" />
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/invite_new_position_address_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toLeftOf="@+id/invite_new_position_ready"
+            android:layout_toStartOf="@+id/invite_new_position_ready"
+            android:textSize="18dp"
+            app:met_floatingLabel="normal"
+            app:met_floatingLabelText="XXX" />
+    </RelativeLayout>
+
+</RelativeLayout>

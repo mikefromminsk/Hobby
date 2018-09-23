@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chat_layout"
+        android:background="@drawable/layout_selector">
+
+        <com.lopei.collageview.CollageView
+            android:id="@+id/chat_members_collage"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/chat_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/chat_members_collage"
+            android:layout_toRightOf="@+id/chat_members_collage"
+            android:text="John Smith"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:paddingRight="15dip"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:freezesText="true"/>
+
+        <com.club.minsk.utils.CircularNetworkImageView
+            android:id="@+id/chat_last_message_owner_avatar"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignBottom="@+id/chat_members_collage"
+            android:layout_marginLeft="8dp"
+            android:layout_toEndOf="@+id/chat_members_collage"
+            android:layout_toRightOf="@+id/chat_members_collage"
+            android:src="@drawable/user_placeholder"
+            android:visibility="visible"
+            android:layout_marginBottom="8dp" />
+
+        <io.github.rockerhieu.emojicon.EmojiconTextView
+            android:id="@+id/chat_last_message_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I`m batman!"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            emojicon:emojiconSize="24sp"
+            android:layout_alignBottom="@+id/chat_members_collage"
+            android:layout_toRightOf="@+id/chat_last_message_owner_avatar"
+            android:layout_toEndOf="@+id/chat_last_message_owner_avatar"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="18dp" />
+
+        <RelativeLayout
+            android:id="@+id/chat_unread_messages_layout"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/menu_new_messages_count_background"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="18dp">
+
+            <TextView
+                android:id="@+id/chat_unread_messages_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:padding="2dp"
+                android:text="+10"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

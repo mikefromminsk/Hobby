@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+    defaultConfig {
+        applicationId "com.club.minsk"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 103
+        versionName "103"
+        multiDexEnabled true
+    }
+    signingConfigs {
+        release {
+            storeFile file("c:\\keys\\club.jks")
+            storePassword "123123"
+            keyAlias "minsk"
+            keyPassword "123123"
+        }
+    }
+
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            buildConfigField "boolean", "USE_LOG", "false"
+            minifyEnabled false
+            proguardFiles  += file('proguard-rules.txt')
+        }
+    }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile project(':ASNECore')
+    compile project(':emoj')
+    compile project(path: ':facebook')
+    compile project(path: ':vk')
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.vk:androidsdk:1.6.3'
+    compile 'com.karumi:dexter:2.2.2'
+    compile 'com.android.support:appcompat-v7:23.2.0'
+    compile 'com.android.support:recyclerview-v7:23.2.0'
+    compile 'com.android.support:design:23.2.0'
+    compile 'com.google.firebase:firebase-messaging:10.2.1'
+    compile 'com.google.android.gms:play-services:10.2.1'
+    compile 'com.google.maps.android:android-maps-utils:0.4.2'
+    compile 'com.github.clans:fab:1.6.4'
+    compile 'com.rengwuxian.materialedittext:library:2.1.4'
+    compile 'com.github.lopei:collageview:0.1.3'
+
+
+
+    compile 'com.android.support:cardview-v7:23.2.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'com.mindorks:placeholderview:0.7.1'
+    compile 'jp.wasabeef:glide-transformations:2.0.2'
+
+
+    compile 'com.dlazaro66.qrcodereaderview:qrcodereaderview:2.0.2'
+}
+
+
+
+
+
+
+
+
+
+
+
+
+apply plugin: 'com.google.gms.google-services'

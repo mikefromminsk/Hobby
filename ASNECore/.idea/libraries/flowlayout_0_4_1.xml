@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="flowlayout-0.4.1">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../app/build/intermediates/exploded-aar/com.wefika/flowlayout/0.4.1/res" />
+      <root url="jar://$PROJECT_DIR$/../app/build/intermediates/exploded-aar/com.wefika/flowlayout/0.4.1/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.wefika/flowlayout/0.4.1/fbfbaee6e41cd447fff8260ca66ed97fb49ddde6/flowlayout-0.4.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

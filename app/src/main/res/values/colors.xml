@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="gray_background">#e3e4e6</color>
+    <color name="app_color">#527dad</color>
+
+    <color name="selector_down">#e3e4e6</color>
+    <color name="selector_up">#ffffff</color>
+
+    <color name="event_holder_text">#ff5477a3</color>
+
+    <color name="layout_divider">#32000000</color>
+
+    <color name="invite_chat">#fffec63d</color>
+    <color name="invite_phone">#ff92d36e</color>
+    <color name="invite_vk">#ff4c75a3</color>
+    <color name="invite_fb">#3B5998</color>
+    <color name="invite_uber">#ff000000</color>
+    <color name="invite_viber">#ff631878</color>
+    <color name="invite_like">#ffff8a84</color>
+    <color name="invite_disabled">#66000000</color>
+
+    <color name="transparent_white">#66FFFFFF</color>
+    <color name="status">#e4ecfa</color>
+    <color name="help_background">#50000000</color>
+
+
+
+
+</resources>

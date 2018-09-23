@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/event_invites_item_layout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/layout_selector">
+
+        <com.club.minsk.utils.FadeInNetworkImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:id="@+id/event_invites_item_image"
+            android:src="@drawable/arrow_bottom"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/relativeLayout2"
+            android:layout_toEndOf="@+id/relativeLayout2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="group_name"
+            android:id="@+id/event_invites_item_text"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/event_invites_item_image"
+            android:layout_toEndOf="@+id/event_invites_item_image"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="18dp" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/event_invites_item_add"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/circle_add_btn"
+            android:layout_marginRight="16dp"
+            android:tint="@color/app_color" />
+
+        <RelativeLayout
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/relativeLayout2"></RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

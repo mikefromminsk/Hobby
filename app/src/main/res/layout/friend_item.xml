@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/white"
+        android:id="@+id/relativeLayout12">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/friend_item_title_layout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/vk_share_gray_line"
+                android:id="@+id/relativeLayout21"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"></RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Members beside"
+                android:id="@+id/friend_item_title"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/friend_layout"
+            android:background="@drawable/layout_selector"
+            android:layout_below="@+id/friend_item_title_layout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <com.club.minsk.utils.CircularNetworkImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:id="@+id/friend_image"
+                android:src="@drawable/user_placeholder"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentStart="true"
+                android:padding="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="John Smith"
+                android:id="@+id/friend_name"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/friend_image"
+                android:layout_toEndOf="@+id/friend_image"
+                android:layout_marginRight="55dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="15 km"
+                android:id="@+id/fried_item_dist"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginRight="16dp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

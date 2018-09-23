@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ready"
+        android:id="@+id/phone_ready"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp" />
+
+    <br.com.sapereaude.maskedEditText.MaskedEditText
+        android:id="@+id/phone_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:typeface="monospace"
+        app:allowed_chars="1234567890"
+        app:mask="+#(###)###-##-##"
+        android:hint="55555555555"
+        app:keep_hint="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="phone for your friends"
+        android:id="@+id/phone_title"
+        android:layout_above="@+id/phone_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="56dp"
+        android:textSize="18dp"
+        android:textColor="@android:color/black"
+        android:textAlignment="center" />
+</RelativeLayout>

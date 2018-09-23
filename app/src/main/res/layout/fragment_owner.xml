@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:animateLayoutChanges="true"
+    android:layout_height="match_parent">
+
+    <android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipe_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/owner_add_to_friends_layout">
+
+
+        <ScrollView
+            android:id="@+id/scrollView4"
+            android:background="#f7f6f6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout69"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:visibility="visible">
+
+                <com.club.minsk.utils.FadeInNetworkImageView
+                    android:id="@+id/owner_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@android:color/black"
+                    android:scaleType="centerCrop"
+                    android:visibility="visible" />
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout83"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_alignBottom="@+id/owner_photo"
+                    android:background="@drawable/profile_avatar_shadow"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout70"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_centerHorizontal="true"
+                        android:visibility="visible"></RelativeLayout>
+
+                    <com.github.clans.fab.FloatingActionButton
+                        android:id="@+id/owner_call_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginEnd="62dp"
+                        android:layout_marginRight="60dp"
+                        android:layout_toLeftOf="@+id/relativeLayout70"
+                        android:layout_toStartOf="@+id/relativeLayout70"
+                        android:src="@drawable/phone"
+                        android:tint="@android:color/white"
+                        app:fab_colorNormal="@color/invite_phone"
+                        app:fab_colorPressed="@color/invite_phone"
+                        app:fab_colorRipple="@android:color/white"
+                        app:fab_size="normal"
+                        app:menu_shadowColor="@color/invite_disabled"
+                        app:menu_shadowRadius="5dp"
+                        app:menu_showShadow="true"
+                        android:visibility="visible" />
+
+                    <com.github.clans.fab.FloatingActionButton
+                        android:id="@+id/owner_like_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginStart="62dp"
+                        android:layout_toEndOf="@+id/relativeLayout70"
+                        android:layout_toRightOf="@+id/relativeLayout70"
+                        android:src="@drawable/unlike"
+                        android:tint="@android:color/white"
+                        app:fab_colorNormal="@android:color/white"
+                        app:fab_colorPressed="@color/invite_like"
+                        app:fab_size="normal"
+                        app:menu_shadowColor="@color/invite_disabled"
+                        app:menu_shadowRadius="5dp"
+                        app:menu_showShadow="true"
+                        android:visibility="visible" />
+
+                    <com.github.clans.fab.FloatingActionButton
+                        android:id="@+id/owner_add_photo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/camera"
+                        app:fab_colorNormal="@android:color/transparent"
+                        app:fab_colorPressed="@color/transparent_white"
+                        app:fab_colorRipple="@android:color/white"
+                        app:fab_showShadow="false"
+                        app:fab_size="normal"
+                        android:visibility="visible"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true">
+
+                    </com.github.clans.fab.FloatingActionButton>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/owner_name_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_below="@+id/owner_photo"
+                    android:layout_centerHorizontal="true"
+                    android:background="#f7f6f6"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:background="@drawable/shadow_bottom"
+                        android:visibility="visible"
+                        android:id="@+id/owner_contact_layout_shadow"></RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/owner_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:text="Jane Smith"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/black"
+                        android:textSize="24dp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/owner_owner_year_and_city"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/owner_name"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:text="24 years Minsk"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/black"
+                        android:textSize="18dp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/owner_online"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/owner_owner_year_and_city"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="4dp"
+                        android:text="online 24 miutes ago"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="18dp"
+                        android:visibility="visible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/owner_contact_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/owner_name_layout"
+                    android:layout_centerHorizontal="true"
+                    android:background="@android:color/white"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/owner_message"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="20dp"
+                        android:text="ad"
+                        android:textAlignment="center"
+                        android:textAppearance="?android:attr/textAppearanceMedium"
+                        android:visibility="visible" />
+
+                    <RelativeLayout
+                        android:id="@+id/owner_contact_buttons_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/owner_message"
+                        android:visibility="visible">
+
+                        <RelativeLayout
+                            android:id="@+id/owner_phone_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            android:layout_below="@+id/owner_facebook_layout"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginBottom="4dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/shadow_square"
+                                android:visibility="visible">
+
+                                <RelativeLayout
+                                    android:id="@+id/owner_phone_button"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentTop="true"
+                                    android:background="@drawable/layout_selector"
+                                    android:visibility="visible">
+
+                                    <RelativeLayout
+                                        android:id="@+id/owner_phone_color"
+                                        android:layout_width="70dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_alignParentTop="true"
+                                        android:background="@color/invite_phone"
+                                        android:visibility="visible">
+
+                                        <ImageView
+                                            android:id="@+id/imageView18"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_centerVertical="true"
+                                            android:src="@drawable/phone"
+                                            android:tint="@android:color/white"
+                                            android:visibility="visible" />
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="16dp"
+                                        android:layout_toEndOf="@+id/owner_phone_color"
+                                        android:layout_toRightOf="@+id/owner_phone_color"
+                                        android:visibility="visible">
+
+                                        <TextView
+                                            android:id="@+id/owner_phone_name"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentLeft="true"
+                                            android:layout_alignParentStart="true"
+                                            android:layout_alignParentTop="true"
+                                            android:text="Jane Smitch"
+                                            android:textAppearance="?android:attr/textAppearanceLarge"
+                                            android:textSize="24dp"
+                                            android:visibility="visible" />
+
+                                        <TextView
+                                            android:id="@+id/owner_phone_number"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentLeft="true"
+                                            android:layout_alignParentStart="true"
+                                            android:layout_below="@+id/owner_phone_name"
+                                            android:text="+3751********"
+                                            android:textAppearance="?android:attr/textAppearanceLarge"
+                                            android:textIsSelectable="false"
+                                            android:textSize="16dp"
+                                            android:visibility="visible" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/owner_inviting_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginBottom="4dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/shadow_square"
+                                android:visibility="visible">
+
+                                <RelativeLayout
+                                    android:id="@+id/owner_inviting_button"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentTop="true"
+                                    android:background="@drawable/layout_selector"
+                                    android:visibility="visible">
+
+                                    <RelativeLayout
+                                        android:id="@+id/owner_inviting_color"
+                                        android:layout_width="70dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_alignParentTop="true"
+                                        android:background="@color/invite_viber"
+                                        android:visibility="visible">
+
+                                        <ImageView
+                                            android:id="@+id/imageView12"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_centerVertical="true"
+                                            android:src="@drawable/menu_invites"
+                                            android:tint="@android:color/white"
+                                            android:visibility="visible" />
+                                    </RelativeLayout>
+
+                                    <TextView
+                                        android:id="@+id/owner_inviting_text"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="16dp"
+                                        android:layout_toEndOf="@+id/owner_inviting_color"
+                                        android:layout_toRightOf="@+id/owner_inviting_color"
+                                        android:text="Inviting"
+                                        android:textAppearance="?android:attr/textAppearanceLarge"
+                                        android:textIsSelectable="false"
+                                        android:textSize="24dp"
+                                        android:visibility="visible" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/owner_chat_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            android:layout_below="@+id/owner_inviting_layout"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginBottom="4dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/shadow_square"
+                                android:visibility="visible">
+
+                                <RelativeLayout
+                                    android:id="@+id/owner_chat_button"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentTop="true"
+                                    android:background="@drawable/layout_selector"
+                                    android:visibility="visible">
+
+                                    <RelativeLayout
+                                        android:id="@+id/owner_chat_color"
+                                        android:layout_width="70dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_alignParentTop="true"
+                                        android:background="@color/invite_chat"
+                                        android:visibility="visible">
+
+                                        <ImageView
+                                            android:id="@+id/imageView27"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_centerVertical="true"
+                                            android:src="@drawable/message"
+                                            android:tint="@android:color/white"
+                                            android:visibility="visible" />
+
+                                    </RelativeLayout>
+
+                                    <TextView
+                                        android:id="@+id/owner_chat_text"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="16dp"
+                                        android:layout_toEndOf="@+id/owner_chat_color"
+                                        android:layout_toRightOf="@+id/owner_chat_color"
+                                        android:text="Chat"
+                                        android:textAppearance="?android:attr/textAppearanceLarge"
+                                        android:textIsSelectable="false"
+                                        android:textSize="24dp"
+                                        android:visibility="visible" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/owner_vkontakte_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            android:layout_below="@+id/owner_chat_layout"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginBottom="4dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/shadow_square"
+                                android:visibility="visible" >
+
+                                <RelativeLayout
+                                    android:id="@+id/owner_vkontakte_button"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentTop="true"
+                                    android:background="@drawable/layout_selector"
+                                    android:visibility="visible" >
+
+                                    <RelativeLayout
+                                        android:id="@+id/owner_vkontakte_color"
+                                        android:layout_width="70dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_alignParentTop="true"
+                                        android:background="@color/vk_color"
+                                        android:visibility="visible" >
+
+                                        <ImageView
+                                            android:id="@+id/owner_vkontakte_image"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_centerVertical="true"
+                                            android:src="@drawable/social_vk"
+                                            android:tint="@android:color/white"
+                                            android:visibility="visible" />
+                                    </RelativeLayout>
+
+                                    <TextView
+                                        android:id="@+id/owner_vkontakte_text"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="16dp"
+                                        android:layout_toEndOf="@+id/owner_vkontakte_color"
+                                        android:layout_toRightOf="@+id/owner_vkontakte_color"
+                                        android:text="Vkontakte"
+                                        android:textAppearance="?android:attr/textAppearanceLarge"
+                                        android:textIsSelectable="false"
+                                        android:textSize="24dp"
+                                        android:visibility="visible" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/owner_facebook_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:visibility="visible"
+                            android:layout_below="@+id/owner_vkontakte_layout"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="80dp"
+                                android:layout_alignParentLeft="true"
+                                android:layout_alignParentStart="true"
+                                android:layout_alignParentTop="true"
+                                android:layout_marginBottom="4dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="4dp"
+                                android:background="@drawable/shadow_square"
+                                android:visibility="visible" >
+
+                                <RelativeLayout
+                                    android:id="@+id/owner_facebook_button"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentStart="true"
+                                    android:layout_alignParentTop="true"
+                                    android:background="@drawable/layout_selector"
+                                    android:visibility="visible" >
+
+                                    <RelativeLayout
+                                        android:id="@+id/owner_facebook_color"
+                                        android:layout_width="70dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_alignParentTop="true"
+                                        android:background="@color/invite_fb"
+                                        android:visibility="visible" >
+
+                                        <ImageView
+                                            android:id="@+id/owner_facebook_image"
+                                            android:layout_width="40dp"
+                                            android:layout_height="40dp"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_centerVertical="true"
+                                            android:src="@drawable/social_fb"
+                                            android:tint="@android:color/white"
+                                            android:visibility="visible" />
+                                    </RelativeLayout>
+
+                                    <TextView
+                                        android:id="@+id/owner_facebook_text"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="16dp"
+                                        android:layout_toEndOf="@+id/owner_facebook_color"
+                                        android:layout_toRightOf="@+id/owner_facebook_color"
+                                        android:text="Facebook"
+                                        android:textAppearance="?android:attr/textAppearanceLarge"
+                                        android:textIsSelectable="false"
+                                        android:textSize="24dp"
+                                        android:visibility="visible" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <com.github.clans.fab.FloatingActionButton
+                    android:id="@+id/owner_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/more"
+                    app:fab_colorNormal="@android:color/transparent"
+                    app:fab_colorPressed="@color/transparent_white"
+                    app:fab_colorRipple="@android:color/white"
+                    app:fab_showShadow="false"
+                    app:fab_size="normal"
+                    android:visibility="visible" />
+
+                <ProgressBar
+                    android:id="@+id/image_upload_progress_bar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="false"
+                    android:visibility="visible"
+                    android:layout_above="@+id/relativeLayout83"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="35dp" />
+
+
+            </RelativeLayout>
+        </ScrollView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <com.github.clans.fab.FloatingActionButton
+        android:id="@+id/owner_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:src="@drawable/menu"
+        app:fab_colorNormal="@android:color/transparent"
+        app:fab_colorPressed="@color/transparent_white"
+        app:fab_colorRipple="@android:color/white"
+        app:fab_showShadow="false"
+        app:fab_size="normal"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/owner_add_to_friends_shadow"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_above="@+id/owner_add_to_friends_layout"
+        android:background="@drawable/shadow_bottom"
+        android:visibility="visible"></RelativeLayout>
+
+    <RelativeLayout
+        android:animateLayoutChanges="true"
+        android:id="@+id/owner_add_to_friends_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/app_color"
+        android:visibility="visible"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/owner_add_to_friends_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="Add to friends"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@android:color/white"
+                android:textSize="24dp"
+                android:visibility="visible" />
+    </RelativeLayout>
+</RelativeLayout>

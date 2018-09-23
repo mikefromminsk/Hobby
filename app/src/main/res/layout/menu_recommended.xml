@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/layout_selector"
+        android:id="@+id/relativeLayout27"
+        android:layout_below="@+id/menu_rec_layout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <com.android.volley.toolbox.NetworkImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:id="@+id/menu_rec_logo"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_margin="6dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="title"
+            android:id="@+id/menu_rec_title"
+            android:layout_alignBottom="@+id/menu_rec_logo"
+            android:layout_toRightOf="@+id/menu_rec_logo"
+            android:layout_toEndOf="@+id/menu_rec_logo"
+            android:layout_marginBottom="12dp"
+            android:textColor="@android:color/black"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/menu_rec_layout"
+        android:background="@android:color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Recommended"
+            android:id="@+id/menu_rec_caption"
+            android:visibility="visible"
+            android:layout_below="@+id/relativeLayout31"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textColor="@android:color/black"
+            android:textSize="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@android:color/darker_gray"
+            android:id="@+id/relativeLayout31"
+            android:layout_marginTop="6dp"></RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
