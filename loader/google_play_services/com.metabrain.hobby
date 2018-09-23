@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "477761489890",
+    "firebase_url": "https://hobby-4bc14.firebaseio.com",
+    "project_id": "hobby-4bc14",
+    "storage_bucket": "hobby-4bc14.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:477761489890:android:f25e7045f19e5eba",
+        "android_client_info": {
+          "package_name": "com.metabrain.hobby"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "477761489890-e58p3tuokbsfhh8v21b0g4d1tbmuldbh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDknyN4hV7UrHICCl7pHlrvcAMP_y_hSiA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

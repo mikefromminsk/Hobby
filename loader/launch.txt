@@ -1,0 +1,1 @@
+adb shell am start -n com.metabrain.sedmoe_prilozhenie/com.metabrain.sedmoe_prilozhenie.SplashActivity

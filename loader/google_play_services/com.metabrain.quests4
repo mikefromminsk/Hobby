@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "1082893935542",
+    "firebase_url": "https://goapp2-146117.firebaseio.com",
+    "project_id": "goapp2-146117",
+    "storage_bucket": "goapp2-146117.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082893935542:android:94dd12ebfd8fea6e",
+        "android_client_info": {
+          "package_name": "com.metabrain.quests2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082893935542-rhp1u5bmt5b49n5u8i2mgptte4c51c44.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEi9nnG23tNJNsohPutL1PBPAqFZXnVgs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1082893935542:android:4ab39422305f1aae",
+        "android_client_info": {
+          "package_name": "com.metabrain.quests3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1082893935542-rhp1u5bmt5b49n5u8i2mgptte4c51c44.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEi9nnG23tNJNsohPutL1PBPAqFZXnVgs"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
