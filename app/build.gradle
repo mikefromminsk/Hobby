@@ -28,6 +28,11 @@ android {
             proguardFiles  += file('proguard-rules.txt')
         }
     }
+
+    dexOptions {
+        incremental true
+        javaMaxHeapSize "2048M"
+    }
 }
 
 
@@ -61,9 +66,6 @@ dependencies {
 
     compile 'com.dlazaro66.qrcodereaderview:qrcodereaderview:2.0.2'
 }
-
-
-
 
 
 

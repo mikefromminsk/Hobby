@@ -28,6 +28,7 @@ import java.lang.annotation.RetentionPolicy;
  * @author Hieu Rocker (rockerhieu@gmail.com)
  */
 public class Emojicon implements Parcelable {
+    @Retention(RetentionPolicy.SOURCE)
     @IntDef({DynamicDrawableSpan.ALIGN_BASELINE, DynamicDrawableSpan.ALIGN_BOTTOM})
     public @interface Alignment {
     }
