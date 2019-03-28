@@ -1,13 +1,13 @@
 <resources>
- <string name="debug_host">192.168.1.10</string>
+ <string name="debug_host">172.17.0.70</string>
     <string name="release_host">fans.by</string>
 
     <string name="app_id">1</string>
     <string name="app_name">Го гулять</string>
     <integer name="com_vk_sdk_AppId">6238559</integer>
     <string name="facebook_app_id">290789458103759</string>
-    <string name="google_maps_api_key">AIzaSyDknyN4hV7UrHICCl7pHlrvcAMP_y_hSiA</string>
-    <string name="google_maps_geocoding_api_key">AIzaSyAKuTM3zU8NU5RzuJOjNggRLNKa1_xc8kE</string>
+    <string name="google_maps_api_key">AIzaSyDS4NcpuaRv82o3sce2QSejsn6Xa-YeC8w</string>
+    <string name="google_maps_geocoding_api_key">AIzaSyDS4NcpuaRv82o3sce2QSejsn6Xa-YeC8w</string>
 
     <string name="empty">empty</string>
 

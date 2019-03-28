@@ -115,9 +115,10 @@ public class Geocoder {
     }
 
     public static String getAddressLink(double lat, double lon, String language) {
-        return "http://maps.googleapis.com/maps/api/geocode/json?"
+        return "https://maps.googleapis.com/maps/api/geocode/json?"
                 + "&latlng=" + lat + "," + lon
-                + "&language=" + URLEncoder.encode(language);
+                + "&language=" + URLEncoder.encode(language)
+                + "&key=" + Strings.get(R.string.google_maps_geocoding_api_key);
     }
 
 

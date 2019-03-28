@@ -409,7 +409,8 @@ public class InviteFragment extends AppFragment {
                         + "&center=" + event.event_lat + "," + event.event_lon
                         + "&size=" + (int) App.getActiveActivity().getWindowManager().getDefaultDisplay().getWidth()
                         + "x" + (int) AndroidUtils.convertDpToPixel(260, App.getActiveActivity())
-                        + "&zoom=14&scale=1&maptype=roadmap&format=jpg&visual_refresh=true";
+                        + "&zoom=14&scale=1&maptype=roadmap&format=jpg&visual_refresh=true"
+                        + "&key=" + Strings.get(R.string.google_maps_geocoding_api_key);
                 event_map_image.setImageUrl(staticMap, App.getImageLoader());
             }
         });

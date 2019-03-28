@@ -126,7 +126,8 @@ public class InviteHolder extends RecyclerView.ViewHolder {
                     + "&center=" + event.event_lat + "," + event.event_lon
                     + "&size=" + (int) (display.getWidth() - AndroidUtils.convertDpToPixel(16 * 2, App.getActiveActivity()))
                     + "x" + (int) AndroidUtils.convertDpToPixel(200, App.getActiveActivity())
-                    + "&zoom=14&scale=1&maptype=roadmap&format=jpg&visual_refresh=true";
+                    + "&zoom=14&scale=1&maptype=roadmap&format=jpg&visual_refresh=true"
+                    + "&key=" + Strings.get(R.string.google_maps_geocoding_api_key);
             invite_item_map.setImageUrl(staticMap, App.getImageLoader());
         } else {
             invite_item_map.setImageUrl(Links.get(event.event_image_link_id), App.getImageLoader());

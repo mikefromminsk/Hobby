@@ -141,7 +141,7 @@ public class PhoneFragment extends AppFragment implements View.OnClickListener {
                 App.owner.first_name,
                 App.owner.last_name,
                 App.owner.sex,
-                App.owner.avatar,
+                App.owner.photo,
                 App.owner.photo,
                 App.owner.vk_id,
                 App.owner.fb_id,
