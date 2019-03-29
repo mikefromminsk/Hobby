@@ -57,6 +57,9 @@ if ($owner_id == null) {
     if ($owner_avatar == null && $owner_photo != null)
         $owner_avatar_link_id = put_image($owner_photo, true);
 
+    if ($owner_avatar_link_id)
+        $owner_avatar_link_id = $owner_photo_link_id;
+
 
     $result["response"] = insertList("owners", array(
         "app_id" => $app_id,

@@ -1,4 +1,5 @@
 <?php
+define("SERVER_ID", '172.17.0.70');
 
 $domains = explode(".", $_SERVER["HTTP_HOST"]);
 if (sizeof($domains) == 2 && $domains[1] == 'localhost'
@@ -8,10 +9,10 @@ if (sizeof($domains) == 2 && $domains[1] == 'localhost'
     define("APP_PACKAGE",  $domains[0]);
     unset($domains[0]);
     $HTTP_HOST = implode(".", $domains);
-    define("SERVER_HOST",  ($HTTP_HOST == "localhost" ? '192.168.1.10' : $HTTP_HOST));
+    define("SERVER_HOST",  ($HTTP_HOST == "localhost" ? SERVER_ID : $HTTP_HOST));
 }else{
     define("APP_PACKAGE",  "");
-    define("SERVER_HOST",  ($_SERVER['HTTP_HOST'] == "localhost" ? '192.168.1.10' : $_SERVER['HTTP_HOST']));
+    define("SERVER_HOST",  ($_SERVER['HTTP_HOST'] == "localhost" ? SERVER_ID : $_SERVER['HTTP_HOST']));
 }
 
 define("SERVER_URL",  "http://" . SERVER_HOST . "/");

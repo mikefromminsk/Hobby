@@ -2,6 +2,9 @@
 $image = get_string("image_base64");
 $image = base64_decode($image);
 
+if ($image === false)
+    error(USER_ERROR);
+
 if ($image == null)
     $result["link_id"] = put_image(get_string_requared("image_url"));
 else

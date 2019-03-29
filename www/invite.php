@@ -7,7 +7,7 @@ header("Content-type: html; charset=utf-8");
 $event_id = get_int("id");
 $event = selectMap("select * from events where event_id = $event_id");
 $owner = selectMap("select * from owners where owner_id = " . $event["owner_id"]);
-$url = "http://192.168.1.10/invite?id=" . $event_id;
+$url = "http://" . SERVER_ID . "/invite?id=" . $event_id;
 
 if ($event_id != null &&
     scalar("select count(*) from members where attach_type = " . ATTACH_TYPE_LINK . " and attach_id = $event_id") == 0
@@ -38,6 +38,7 @@ if ($event_id != null &&
             .hide-mobile {
                 display: none;
             }
+
             .action-button {
                 width: 100%;
             }
@@ -61,15 +62,15 @@ if ($event_id != null &&
         <div class="layout-column flex layout-align-center-center"
              style="color: #ffffff; text-shadow:0 0 5px #00c6ff;">
             <div
-                style="margin: 0 20px 0 20px; font-size: 3.5em">
+                    style="margin: 0 20px 0 20px; font-size: 3.5em">
                 Го гулять Минск
             </div>
             <div
-                style="margin: 20px 20px 20px 20px; max-width: 400px; font-size: 2em">
+                    style="margin: 20px 20px 20px 20px; max-width: 400px; font-size: 2em">
                 Приложение для поиска компании на вечер.
             </div>
             <div
-                style="margin: 0 20px 0 20px; max-width: 400px; font-size: 2em">
+                    style="margin: 0 20px 0 20px; max-width: 400px; font-size: 2em">
                 Нас уже <span id="owner_count"
                               style="font-size: 1.5em"><?= scalar("select count(*) from owners where app_id = " . $owner["app_id"]) ?></span>
             </div>
@@ -126,6 +127,7 @@ if ($event_id != null &&
             loop();
         }, rand);
     }
+
     loop();
 
 
@@ -137,14 +139,14 @@ if ($event_id != null &&
         perspective: 600,
         autoplay: true
     });
-/*
-    if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
-        $('.hide-mobile').css("display", "none");
-    }*/
+    /*
+        if (navigator.userAgent.toLowerCase().indexOf("android") > -1) {
+            $('.hide-mobile').css("display", "none");
+        }*/
 
     var xhr = new XMLHttpRequest();
     xhr.open('GET', 'http://localhost:18846', true);
-    xhr.onreadystatechange = function() {
+    xhr.onreadystatechange = function () {
         if (xhr.readyState != 4) return;
         if (xhr.status == 200) {
             $('#download_button').css("display", "none");

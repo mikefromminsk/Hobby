@@ -107,16 +107,18 @@ function save_image($image, $rounded = false, $jpeg = false, $max_size = 800)
 {
     $image = imagecreatefromstring($image);
     if ($image === false)
-        return null;
+        error(USER_ERROR);
     $image = resize_image($image, $max_size);
     if ($rounded)
         $image = round_image($image);
 
     $image_file = to_global_path(UPLOAD_DIR . random_id());
+
     if ($rounded == false && $jpeg == true)
         imagejpeg($image, $image_file, 75); //quality 0 - 9
     else
         imagepng($image, $image_file, 6); //quality 0 - 9
+
     imagedestroy($image);
 
     $new_file_name = UPLOAD_DIR . md5_file($image_file) . ".png";
@@ -149,7 +151,6 @@ function put_image($image_url, $rounded = false, $jpeg = false, $max_size = 800)
         if (parse_url($image_url, PHP_URL_HOST) != SERVER_HOST) {
             $link_id = scalar("select link_id from links where link_local_path = '" . parse_url($image_url, PHP_URL_PATH) . "'");
         }
-
         if ($link_id == null) {
             $image = getSslImage($image_url);
             return save_image($image, $rounded, $jpeg, $max_size);
