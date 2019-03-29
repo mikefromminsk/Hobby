@@ -23,7 +23,12 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.Volley;
+import com.club.minsk.db.Devices;
 import com.club.minsk.db.Events;
+import com.club.minsk.db.Messages;
+import com.club.minsk.db.Strings;
+import com.club.minsk.db.tables.EventsTable;
+import com.club.minsk.db.utils.ApiRequest;
 import com.club.minsk.login.Person;
 import com.club.minsk.login.reg.AvatarFragment;
 import com.club.minsk.login.reg.NameFragment;
@@ -31,17 +36,13 @@ import com.club.minsk.login.reg.PhoneFragment;
 import com.club.minsk.login.reg.SexFragment;
 import com.club.minsk.login.reg.YearFragment;
 import com.club.minsk.start.StartFragment;
-import com.club.minsk.utils.Catcher;
-import com.karumi.dexter.Dexter;
-import com.club.minsk.db.Devices;
-import com.club.minsk.db.Messages;
-import com.club.minsk.db.tables.EventsTable;
-import com.club.minsk.db.utils.ApiRequest;
 import com.club.minsk.utils.AndroidUtils;
 import com.club.minsk.utils.AppFragment;
-import com.club.minsk.db.Strings;
+import com.club.minsk.utils.Catcher;
 import com.club.minsk.utils.Cookies;
+import com.club.minsk.utils.DBHelper;
 import com.club.minsk.utils.LruBitmapCache;
+import com.karumi.dexter.Dexter;
 
 import java.io.Serializable;
 import java.util.List;
@@ -66,7 +67,7 @@ public class App extends MultiDexApplication {
         super.onCreate();
         mInstance = this;
 
-        Cookies.init(getApplicationContext());
+        Cookies.init(getApplicationContext(), new DBHelper(getApplicationContext()));
     }
 
 
@@ -409,7 +410,7 @@ public class App extends MultiDexApplication {
 
     public static void logout() {
         Cookies.clear();
-        Cookies.init(getInstance());
+        Cookies.init(getInstance(), new DBHelper(getInstance()));
         activeActivity.startActivity(new Intent(activeActivity, StartActivity.class));
         activeActivity.finish();
     }

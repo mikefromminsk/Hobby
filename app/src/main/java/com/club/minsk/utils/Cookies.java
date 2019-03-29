@@ -1,22 +1,21 @@
 package com.club.minsk.utils;
 
 import android.content.Context;
-import android.content.SharedPreferences;
 
 import com.club.minsk.BuildConfig;
 import com.club.minsk.db.Strings;
 
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Map;
 
 public class Cookies {
 
-    private static SharedPreferences ownerStore;
+    private static DBHelper db;
 
-    public static void init(Context applicationContext) {
-        ownerStore = applicationContext.getSharedPreferences("owner", Context.MODE_PRIVATE);
-
+    public static void init(Context applicationContext, DBHelper dbHelper) {
+        if (db != null)
+            db.close();
+        Cookies.db = dbHelper;
         set("app_id", Strings.get("app_id"));
         set("device_id", AndroidUtils.getDeviceId(applicationContext));
         set("device_lang", AndroidUtils.getLang(applicationContext));
@@ -28,12 +27,7 @@ public class Cookies {
     }
 
     public static String get(String name) {
-        if (ownerStore != null) {
-            if (!ownerStore.contains(name))
-                return null;
-            return ownerStore.getString(name, null);
-        }else
-            return null;
+        return db.get(name);
     }
 
     public static Long getInt(String name) {
@@ -44,25 +38,21 @@ public class Cookies {
     }
 
     public static void set(String key, String value) {
-        ownerStore.edit().putString(key, value).apply();
+        db.put(key, value);
     }
 
     public static Map<String, String> getMap() {
-        Map<String, String> result = new HashMap<>();
-        Map<String, ?> allEntries = ownerStore.getAll();
-        for (Map.Entry<String, ?> entry : allEntries.entrySet())
-            result.put(entry.getKey(), entry.getValue().toString());
-        return result;
+        return db.all();
     }
 
     public static void clear() {
         String device_token = get("device_token");
-        ownerStore.edit().clear().apply();
+        db.clear();
         set("device_token", device_token);
     }
 
     public static void remove(String key) {
-        ownerStore.edit().remove(key).apply();
+        db.delete(key);
     }
 
     public static Double getFloat(String key) {

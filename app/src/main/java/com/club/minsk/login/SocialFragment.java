@@ -203,7 +203,8 @@ public class SocialFragment extends AppFragment implements OnLoginCompleteListen
 
                             App.owner.first_name = user.first_name;
                             App.owner.last_name = user.last_name;
-                            App.owner.sex = user.gender.equals("male") ? "M" : "W";
+                            // TODO chnage gender to another
+                            App.owner.sex = /*user.gender.equals("male") ? "M" : "W"*/"M" ;
                             App.owner.bdate = user.getUnixBirthday();
                             App.owner.photo = user.picture.data.url;
                             App.owner.fb_id = user.id;
